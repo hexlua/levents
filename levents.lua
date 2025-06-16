@@ -1,4 +1,4 @@
--- creates a new event
+-- creates a new event emitter
 local function new()
     local e = {}
     e.data = {} -- other properties of `e` are reserved for future use
