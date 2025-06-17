@@ -76,6 +76,9 @@ local function new()
     -- emits an event
     function e:emit(name, ...)
         initevent(self, name)
+        if self.data[name].active == false then
+            return
+        end
         local i = #self.data[name].on
         while i > 0 do
             self.data[name].on[i](...)
